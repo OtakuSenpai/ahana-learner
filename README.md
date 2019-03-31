@@ -33,3 +33,11 @@ To send messages to the bot type this.
 
 Auto generated messages using the bot's trained models are sent. Models are trained on the 
 tensorflow Shakespeare text.
+
+To train a new model, try changing this 2 lines:
+```
+EPOCHS=15
+
+history = model.fit(dataset.repeat(), epochs=EPOCHS, steps_per_epoch=steps_per_epoch, callbacks=[checkpoint_callback])
+```
+EPOCHS being the number of times you want to train the model.
